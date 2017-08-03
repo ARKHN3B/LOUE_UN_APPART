@@ -11,7 +11,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('htmlreload', function(){
-    return gulp.src('./index.html')
+    return gulp.src('./Accueil.html')
         .pipe(livereload());
 });
 
