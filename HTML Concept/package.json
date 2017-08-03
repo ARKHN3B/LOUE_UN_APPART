@@ -1,0 +1,24 @@
+{
+  "name": "bilskirnir_immo",
+  "version": "1.0.0",
+  "description": "Project Ecole du Numerique",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARKHN3B/LOUE_UN_APPART.git"
+  },
+  "author": "Benjamin Lemullois",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARKHN3B/LOUE_UN_APPART/issues"
+  },
+  "homepage": "https://github.com/ARKHN3B/LOUE_UN_APPART#readme",
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "sass": "^1.0.0-beta.2"
+  }
+}
