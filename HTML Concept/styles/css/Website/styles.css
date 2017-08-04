@@ -1,17 +1,135 @@
+@font-face {
+  font-family: "Lato Black";
+  src: url("Lato/Lato-Black.ttf"); }
+
+@font-face {
+  font-family: "Lato Black-Italic";
+  src: url("Lato/Lato-BlackItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("Lato/Lato-Bold.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold-Italic";
+  src: url("Lato/Lato-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline";
+  src: url("Lato/Lato-Hairline.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline-Italic";
+  src: url("Lato/Lato-HairlineItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Italic";
+  src: url("Lato/Lato-Italic.ttf"); }
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: "Lato Light-Italic";
+  src: url("Lato/Lato-LightItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato";
+  src: url("Lato/Lato-Regular.ttf"); }
+
 body {
   margin: 0px; }
+  body #title_website {
+    color: #0097fd;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "Lato Light-Italic"; }
   body header {
     width: 100%;
     height: 100vh; }
+    body header #background_header {
+      width: 1425px;
+      height: auto;
+      position: relative; }
     body header #img_logo_header {
-      width: 400px;
+      width: 450px;
       height: auto;
-      position: relative;
-      left: calc(50% - (400px / 2));
-      top: calc(38% - (364.23px / 2)); }
-    body header #img_title_logo_header {
-      width: 400px;
-      height: auto;
-      position: relative;
-      left: calc(21.8% - (400px / 2));
-      top: calc(67% - (400px / 2)); }
+      position: absolute;
+      left: calc(50% - (450px / 2));
+      top: calc(39% - (409.77px / 2)); }
+    body header form #span_header {
+      position: absolute;
+      top: 64%;
+      left: calc(50% - (482px / 2));
+      display: flex; }
+      body header form #span_header #search_bar_header {
+        width: 385px;
+        height: 45px;
+        border: 0px;
+        border-radius: 2px;
+        padding-left: 26px;
+        font-size: 18px;
+        color: #3c3c3c; }
+      body header form #span_header #submit_header {
+        background-color: #0097fd;
+        margin-left: 8px;
+        border: 1px;
+        border-radius: 2px;
+        width: 87px;
+        font-size: 18px;
+        color: white;
+        font-family: "Lato Light"; }
+    body header form #span_checking {
+      width: 420px;
+      position: absolute;
+      top: 576px;
+      left: calc(50.1% - (482px / 2));
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      body header form #span_checking #label_check_house {
+        background-color: #ffffff;
+        width: 95px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px; }
+        body header form #span_checking #label_check_house #check_house {
+          width: 38px;
+          height: 17px; }
+        body header form #span_checking #label_check_house #span_check_house {
+          font-family: "Lato Light";
+          color: coral;
+          width: 75px;
+          font-size: 18px;
+          margin-top: -2px; }
+      body header form #span_checking #label_check_appartment {
+        margin-left: 30px;
+        background-color: #ffffff;
+        width: 144px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px; }
+        body header form #span_checking #label_check_appartment #check_appartment {
+          width: 30px;
+          height: 17px; }
+        body header form #span_checking #label_check_appartment #span_check_appartment {
+          font-family: "Lato Light";
+          color: coral;
+          width: 75px;
+          font-size: 18px;
+          margin-top: -2px; }
+      body header form #span_checking a {
+        cursor: pointer;
+        margin-top: -2px;
+        margin-left: 30px;
+        color: #ffffff;
+        font-family: "Lato Light";
+        font-size: 18px;
+        text-decoration: none; }
+      body header form #span_checking a:hover {
+        color: #0097fd; }

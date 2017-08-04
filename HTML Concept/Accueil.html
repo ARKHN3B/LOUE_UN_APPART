@@ -10,16 +10,34 @@
     </head>
 
     <body>
-        <header>
-            <img src="logo_header.png" 
-             alt=""
-             title=""
+        <header id="header">
+            <img src="_pictures/background_1.png"
+                 alt="background_header_page"
+                 title="background_header_page"
+                 id="background_header">
+            <img src="_pictures/logo_header_blue.png" 
+             alt="logo_header_blue"
+             title="Welcome on Biskirnir Location"
              id="img_logo_header">
-            <img src="title_logo_header.png" 
-                 alt=""
-                 title=""
-                 id="img_title_logo_header">
+             <form action="" method="POST" id="form_head">
+                <span id="span_checking">
+                    <label for="check_house" id="label_check_house">
+                        <input type="checkbox" checked="checked" id="check_house">
+                        <span id="span_check_house">House</span>
+                    </label>
+                    <label for="check_appartment" id="label_check_appartment">
+                        <input type="checkbox" checked="checked" id="check_appartment">
+                        <span id="span_check_appartment">Appartment</span>
+                    </label>
+                    <a href="">More choice ></a>
+                </span>
+                 <span id="span_header">
+                     <input type="text" id="search_bar_header" placeholder="Enter a city, or country..."> <input type="submit" id="submit_header" value="Search">
+                 </span>
+             </form>
         </header>
-        
+        <span id="title_website">Bilskirnir Location</span>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
     </body>
 </html>

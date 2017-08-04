@@ -1,28 +1,152 @@
+@import "Lato.scss";
+
 body {
-    // overflow: hidden;
+    
+    //overflow: hidden;
     margin: 0px;
+
+    #title_website {
+        color: #0097fd;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-family: "Lato Light-Italic";
+    }
 
     header {
 
         width: 100%;
         height: 100vh;
 
-        #img_logo_header {
-            width: 400px;
+        #background_header {
+            width: 1425px;
             height: auto;
 
-            position: relative;
-            left: calc(50% - (400px / 2));
-            top: calc(38% - (364.23px / 2));
+            position: relative; 
         }
 
-        #img_title_logo_header {
-            width: 400px;
+        #img_logo_header {
+            width: 450px;
             height: auto;
+
+            position: absolute;
+            left: calc(50% - (450px / 2));
+            top: calc(39% - (409.77px / 2));
+        }
+
+        form {
+        
+            #span_header {
+
+                position: absolute;
+                top: 64%;
+                left: calc(50% - (482px / 2));
+                display: flex;
+
+            //opacity: 0;
+            //transition: all 1s;
+
+                #search_bar_header {
+                width: 385px;
+                height: 45px;
+                border: 0px;
+                border-radius: 2px;
+                padding-left: 26px;
+
+                font-size: 18px;
+                color: #3c3c3c;
+                }
+
+                #submit_header {
+                    background-color: #0097fd;
+                    margin-left: 8px;
+                    border: 1px;
+                    border-radius: 2px;
+                    width: 87px;
+
+                    font-size: 18px;
+                    color: white;
+                    font-family: "Lato Light";
+                }
+            }
+
+            #span_checking {
+
+                width: 420px;
+
+                position: absolute;
+                top: 576px;
+                left: calc(50.1% - (482px / 2));
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                #label_check_house {
+                    background-color: #ffffff;
+                    width: 95px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 4px;
+
+                    #check_house {
+                        width: 38px;
+                        height: 17px;
+                    }
+
+                    #span_check_house {
+                        font-family: "Lato Light";
+                        color: coral;
+                        width: 75px;
+                        font-size: 18px;
+                        margin-top: -2px;
+                    }
+                }
+
+                #label_check_appartment {
+                    margin-left: 30px;
+                    background-color: #ffffff;
+                    width: 144px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 4px;
+
+                    #check_appartment {
+                        width: 30px;
+                        height: 17px;
+                    }
+
+                    #span_check_appartment {
+                        font-family: "Lato Light";
+                        color: coral;
+                        width: 75px;
+                        font-size: 18px;
+                        margin-top: -2px;
+                    }
+                }
+
+                a {
+                    cursor: pointer;
+
+                    margin-top: -2px;
+                    margin-left: 30px;
+                    color: #ffffff;
+                    font-family: "Lato Light";
+                    font-size: 18px;
+
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: #0097fd;
+                }
+            }
             
-            position: relative;
-            left: calc(21.8% - (400px / 2));
-            top: calc(67% - (400px / 2));
+
+
         }
     }
     
