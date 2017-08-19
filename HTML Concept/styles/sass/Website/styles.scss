@@ -48,13 +48,28 @@ body {
         }
     }
 
-    #iframe_signin {
+    .iframe_signin {
+        display: block;
+
         width: 425px;
         height: 485px;
 
         position: absolute;
         left: calc(50% - (425px / 2));
         top: calc(50% - (485px / 2));
+
+        border-radius: 4px;
+    }
+
+    .iframe_signup {
+        display: block;
+
+        width: 500px;
+        height: 725px;
+
+        position: absolute;
+        left: calc(50% - (500px / 2));
+        top: calc(50% - (725px / 2));
 
         border-radius: 4px;
     }

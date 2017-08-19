@@ -69,12 +69,21 @@ body {
       margin-left: 15px; }
     body #span_header_connexion a:hover {
       color: #ff465a; }
-  body #iframe_signin {
+  body .iframe_signin {
+    display: block;
     width: 425px;
     height: 485px;
     position: absolute;
     left: calc(50% - (425px / 2));
     top: calc(50% - (485px / 2));
+    border-radius: 4px; }
+  body .iframe_signup {
+    display: block;
+    width: 500px;
+    height: 725px;
+    position: absolute;
+    left: calc(50% - (500px / 2));
+    top: calc(50% - (725px / 2));
     border-radius: 4px; }
   body .overlay {
     position: fixed;
