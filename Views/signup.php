@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign up</title>
-    <link rel="stylesheet" href="styles/css/Website/styles_signup.css">
+    <link rel="stylesheet" href="assets/styles/css/Website/styles_signup.css">
 </head>
 <body>
-    <form action="" method="">
+    <form action="signup_services" method="POST">
             <div id="fb_sign">
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>Sign up with Facebook
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>Continue with Facebook
             </div>
 
             <div id="google_sign">
-                <i class="fa fa-google" aria-hidden="true"></i>Sign up with Google
+                <i class="fa fa-google" aria-hidden="true"></i>Continue with Google
             </div>
 
             <div id="line_or"></div>
 
             <p id="or">or</p>
 
-            <input type="email" placeholder="Email address">
-            <input type="text" placeholder="Firstname">
-            <input type="text" placeholder="Lastname">
-            <input type="password" placeholder="Create a password">
-            <input type="password" placeholder="Confirm your password">
+            <input type="email" placeholder="Email address" name="email">
+
+            <input type="text" placeholder="Firstname" name="firstname">
+            <input type="text" placeholder="Lastname" name="lastname">
+            <input type="password" placeholder="Create a password" name="password">
+            <input type="password" placeholder="Confirm your password" name="confirmpassword">
 
             <div id="birth">
                 <label for="">Birthday</label>
@@ -53,7 +54,7 @@
             </div>
 
             <span>
-                <input type="checkbox" checked="checked" id="checkbox"> <label for="checkbox">I'd like to receive promotional communications from Bilskirnir and his
+                <input type="checkbox" checked="checked" id="checkbox" name="checkbox"> <label for="checkbox">I'd like to receive promotional communications from Bilskirnir and his
                 partners via email.
                 </label>
             </span>  
@@ -68,6 +69,7 @@
             
             
     </form>
-    <script src="script_signup.js"></script>
+    <script src="assets/scripts/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/script_signup.js"></script>
 </body>
 </html>

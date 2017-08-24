@@ -89,6 +89,14 @@ body {
             color: #757575;
         }
 
+        #email_False {
+            display: none;
+        }
+
+        .email_True {
+            display: block;
+        }
+
         input {
             width: 300px;
             height: 30px;

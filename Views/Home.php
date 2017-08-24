@@ -6,18 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Accueil</title>
-        <link rel="stylesheet" href="styles/css/Website/styles.css">
-        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/styles/css/Website/styles.css">
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
 
     <body id="body">
         
         <header id="header">
-            <img src="_pictures/background_1test2.png"
+            <img src="assets/_pictures/background_1test2.png"
                  alt="background_header_page"
                  id="background_header">
 
-            <img src="_pictures/Logo_final.png" 
+            <img src="assets/_pictures/Logo_final.png" 
              alt="logo_header_blue"
              title="Welcome on Biskirnir Location"
              id="img_logo_header">
@@ -53,20 +53,20 @@
         <span id="span_header_connexion">
             <a href="">Become a Host</a>
             <a href="">Help</a>
-            <a href="signup.php" target="signin_target" id="signup_link">Sign up</a>
-            <a href="signin.php" target="signin_target" id="signin_link" >Sign in</a> <!--  -->
+            <a href="signup" target="signin_target" id="signup_link" style="<?= $status_Session[1] ?>">Sign up</a>
+            <a href="<?= $status_Session[2] ?>" target="<?= $status_Session[3] ?>" id="signin_link" ><?= $status_Session[0] ?></a> <!--  -->
         </span>
         
         <!-- onclick="$('#iframe_div').css('display', 'block')" -->
         <section>
-            <img src="_pictures/Logo_final.png" 
+            <img src="assets/_pictures/Logo_final.png" 
                  alt=""
                  id="logo_section">
             <h3>Latest ads</h3>
             <p>______________________________________________________________________________________________________</p>
                 <article>
                     <div>
-                        <img src="_pictures/Hotel.jpg" 
+                        <img src="assets/_pictures/Hotel.jpg" 
                             alt=""
                             title=""
                             id="">
@@ -76,7 +76,7 @@
                     </div>
 
                     <div>
-                        <img src="_pictures/Luxury.jpg" 
+                        <img src="assets/_pictures/Luxury.jpg" 
                             alt=""
                             title=""
                             id="">
@@ -86,7 +86,7 @@
                     </div>
                     
                     <div>
-                        <img src="_pictures/Villa.jpg" 
+                        <img src="assets/_pictures/Villa.jpg" 
                             alt=""
                             title=""
                             id="">
@@ -109,10 +109,10 @@
                     <input type="submit" style="display:none" id="submit_footer">
 
                     <div id="socials_medias_logos">
-                     <a href=""> <img src="_pictures/icons/007-facebook.png" alt="" id="first_img_socmed"> </a>
-                     <a href=""> <img src="_pictures/icons/006-twitter.png" alt=""> </a>
-                     <a href=""> <img src="_pictures/icons/008-instagram.png" alt=""> </a>
-                     <a href=""> <img src="_pictures/icons/005-google-plus.png" alt=""> </a>
+                     <a href=""> <img src="assets/_pictures/icons/007-facebook.png" alt="" id="first_img_socmed"> </a>
+                     <a href=""> <img src="assets/_pictures/icons/006-twitter.png" alt=""> </a>
+                     <a href=""> <img src="assets/_pictures/icons/008-instagram.png" alt=""> </a>
+                     <a href=""> <img src="assets/_pictures/icons/005-google-plus.png" alt=""> </a>
                     </div>
                 </div>
             </form>
@@ -159,7 +159,7 @@
         </div>
         
         <!-- style="display:none" -->
-    <script src="jquery-3.2.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/scripts/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
     </body>
 </html>
