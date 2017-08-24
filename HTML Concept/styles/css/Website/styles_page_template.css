@@ -132,7 +132,8 @@ body {
           color: #ff5a5f; }
       body section .offer .offer_content {
         margin-top: 10px;
-        height: 300px; }
+        height: 300px;
+        width: 925px; }
         body section .offer .offer_content img {
           width: 300px;
           height: auto;
@@ -189,11 +190,54 @@ body {
           top: -424px;
           left: 707px; }
         body section .offer .offer_content .offer_line {
-          width: 911px;
+          width: 940px;
           height: 1px;
           border-bottom: 1px solid #dadada;
           position: relative;
           top: -280px; }
+      body section .offer .offer_profil {
+        position: relative;
+        width: 0px;
+        height: 0px; }
+        body section .offer .offer_profil .profil_line_vertical {
+          height: 225px;
+          border-left: 1px solid #dadada;
+          position: relative;
+          top: -300px;
+          left: 940px; }
+        body section .offer .offer_profil img {
+          border: 1px solid #dadada;
+          width: 75px;
+          height: auto;
+          position: relative;
+          top: -525px;
+          left: 963px;
+          background-color: rgba(255, 64, 84, 0.73);
+          border-radius: 50%; }
+        body section .offer .offer_profil .user_profil {
+          display: flex;
+          width: 100px;
+          position: relative;
+          top: -526px;
+          left: 965px; }
+          body section .offer .offer_profil .user_profil p {
+            font-family: "Lato"; }
+          body section .offer .offer_profil .user_profil p:first-child {
+            color: #272727;
+            margin-right: 5px; }
+          body section .offer .offer_profil .user_profil p:last-child {
+            color: #ff5a5f;
+            font-family: "Lato Bold"; }
+        body section .offer .offer_profil .note_profil {
+          font-family: "Lato Light-Italic";
+          font-size: 13px;
+          color: #272727;
+          position: relative;
+          top: -552px;
+          left: 966px; }
+          body section .offer .offer_profil .note_profil span {
+            font-family: "Lato Light";
+            font-size: 10px; }
     body section .offer:nth-child(2) {
       margin-top: 65px; }
   body footer {
