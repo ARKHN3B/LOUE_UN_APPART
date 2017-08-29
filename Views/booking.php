@@ -48,9 +48,9 @@
                         ?>
                 </ul>
 
-                <form action="" method="POST">
+                <form action="../payment" method="POST">
                     <div id="color">
-                        <p>25$ per night</p>
+                        <p><?= $array_data[0]['price'] ?>$ per night</p>
                     </div>
                     <div id="border">
                         <label for="">Beginning :</label> 

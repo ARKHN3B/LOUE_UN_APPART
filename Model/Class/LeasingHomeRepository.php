@@ -193,7 +193,9 @@ class LeasingHomeRepository {
                 <div class=\"offer_title\"> <a href=\"booking/". $key->getId() ."\" style=\"text-decoration:none;  cursor:pointer;\"><h4>". $key->getTitle() ."</h4></a> <span>‎★‎★‎★‎★‎★</span> </div>
 
                 <div class=\"offer_content\">
-                    <img src=\"assets/_pictures/Villa.jpg\" alt=\"\">
+                <a href=\"booking/". $key->getId() ."\" style=\"text-decoration:none; cursor:pointer;\">
+                    <img src=\"". $key->getPicture1() ."\" alt=\"\">
+                </a>
 
                     <!-- 512 characters maximum ! -->
                     
@@ -208,9 +210,11 @@ class LeasingHomeRepository {
                         $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>
                         <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
                     } elseif ($key->getWifi() == 1 && $key->getairConditioner() == 0) {
-                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>";
+                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>
+                        <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> None</p>";
                     } elseif ($key->getWifi() == 0 && $key->getairConditioner() == 1) {
-                        $str .= "<p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
+                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> None</p>
+                        <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
                     }
 
                     
@@ -250,7 +254,9 @@ class LeasingHomeRepository {
                 <div class=\"offer_title\"> <a href=\"booking/". $key->getId() ."\" style=\"text-decoration:none; cursor:pointer;\"><h4>". $key->getTitle() ."</h4></a> <span>‎★‎★‎★‎★‎★</span> </div>
 
                 <div class=\"offer_content\">
-                    <img src=\"assets/_pictures/Villa.jpg\" alt=\"\">
+                <a href=\"booking/". $key->getId() ."\" style=\"text-decoration:none; cursor:pointer;\">
+                    <img src=\"". $key->getPicture1() ."\" alt=\"\">
+                </a>
 
                     <!-- 512 characters maximum ! -->
                     
@@ -265,9 +271,11 @@ class LeasingHomeRepository {
                         $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>
                         <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
                     } elseif ($key->getWifi() == 1 && $key->getairConditioner() == 0) {
-                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>";
+                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> Wi-fi</p>
+                        <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> None</p>";
                     } elseif ($key->getWifi() == 0 && $key->getairConditioner() == 1) {
-                        $str .= "<p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
+                        $str .= "<p class=\"Wi-fi lato-light\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i> None</p>
+                        <p class=\"Air-Conditioner lato-light\"><i class=\"fa fa-snowflake-o\" aria-hidden=\"true\"></i> Air-Conditioner</p>";
                     }
 
                     
@@ -292,9 +300,9 @@ class LeasingHomeRepository {
     {
         $connexion = $this->_connexion;
         $query = "INSERT INTO leasing(userId, country, city, house, appartment, title, travelers, beds, bathrooms, rooms, 
-        kitchens, wifi, airConditioner, description, picture1, picture2, picture3, picture4, picture5) 
+        kitchens, wifi, airConditioner, description, picture1, picture2, picture3, picture4, picture5, price) 
                   VALUES (:userId, :country, :city, :house, :appartment, :title, :travelers, :beds, :bathrooms, :rooms, :kitchens, 
-                  :wifi, :airConditioner, :description, :picture1, :picture2, :picture3, :picture4, :picture5)";
+                  :wifi, :airConditioner, :description, :picture1, :picture2, :picture3, :picture4, :picture5, :price)";
         $request = $connexion->prepare($query);
         $request->execute(array(
             "userId"=>$lhome->getUserId(),
@@ -315,7 +323,8 @@ class LeasingHomeRepository {
             "picture2"=>$lhome->getPicture2(),
             "picture3"=>$lhome->getPicture3(),
             "picture4"=>$lhome->getPicture4(),
-            "picture5"=>$lhome->getPicture5()
+            "picture5"=>$lhome->getPicture5(),
+            "price"=>$lhome->getPrice()
         ));
         return $request->rowCount();
     }

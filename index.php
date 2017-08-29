@@ -96,13 +96,19 @@ Flight::route('POST /hosting_services', function(){
     $img3 = Flight::request()->files['img3'];
     $img4 = Flight::request()->files['img4'];
     $img5 = Flight::request()->files['img5'];
+    $price = Flight::request()->data['price'];
 
     $hosting_services = new Hosting_Services($userId, $radio, $country, $city, $title, $travelers, $beds, $bathrooms, $rooms, $kitchens,
-                                             $wifi, $airConditioner, $description, $img1, $img2, $img3, $img4, $img5);
+                                             $wifi, $airConditioner, $description, $img1, $img2, $img3, $img4, $img5, $price);
 
     $hosting_services_insert = $hosting_services->Services();
-
-    // Flight::redirect('/home');
+    
+    
+    if ($hosting_services_insert === false) {
+        Flight::redirect('/hosting');
+    } else {
+        Flight::redirect('/home');
+    }
 });
 
 Flight::route('/redirecthosting', function(){
@@ -147,6 +153,10 @@ Flight::route('/booking/@id:[0-9]+', function($id){
 
     $link = Utils::RedirectHosting();
     Flight::render('booking', array("link_hosting" => $link, "array_data"=>$data, "object_userId"=>$userId));
+});
+
+Flight::route('/payment', function(){
+    Flight::render('payment');
 });
 
 Flight::start();

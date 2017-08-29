@@ -1,0 +1,167 @@
+@import "Lato.scss";
+
+
+body {
+    overflow-x: hidden;
+    
+    margin: 0px;
+
+    width: 100%;
+    height: 100vh;
+    
+    #background_header {
+        width: 100%;
+        height: auto;
+
+        position: fixed; 
+    }
+
+    header {
+    
+        width: 100%;
+        height: 14%;
+        
+        .bloc-logo {
+            position: relative;
+            width: 100%;
+            height: 64px;
+            float: left;
+        }
+        
+        .bloc-logo canvas,
+        .bloc-logo .logo-mask {
+            display: block;
+            width: 100%;
+            height: 64px;
+        }
+        
+        .bloc-logo .logo-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../../../_pictures/navpage.png");
+            text-indent: -9999px;
+        }
+
+        h1 {
+            position: absolute;
+            left: 152px;
+            top: 5px;
+
+            font-family: "Lato Italic";
+            color: #f9f9f9;
+            font-size: 23px;
+
+            a {
+                font-family: "Lato Italic";
+                color: #f9f9f9;
+                font-size: 23px;
+                text-decoration: none;
+            }
+        }
+
+        span {
+            display: flex;
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 25px;
+
+            a {
+                color: #f9f9f9;
+                font-family: "Lato Light";
+                text-decoration: none;
+                margin-left: 30px;
+
+                cursor: pointer;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            #link_img_account {
+                margin-left: 7px;
+
+                #img_account {
+                    width: 35px;
+                    height: auto;
+
+                    margin-top: -8px;
+                }
+            }
+
+            #link_img_account:hover {
+                text-decoration: none;
+            }
+            
+        }
+    }
+
+    section {
+        width: 86%;
+        height: 400px;
+
+        margin-bottom: 40px;
+
+        position: relative;
+        left: 7%;
+
+        border-radius: 4px;
+
+        background-color: #f9f9f9;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            height: 130px;
+            width: 350px;
+            margin-left: 35px;
+
+            input {
+                height: 30px;
+                font-family: "Lato Light";
+                font-size: 15px;
+                padding-left: 10px;
+            }
+
+            input:focus {
+                outline-color: #008489;
+            }
+
+            #fullname {
+                margin-top: 10px;
+            }
+
+            #code {
+                margin-top: 10px;
+
+                .width-inp-code {
+                    width: 90px;
+                }
+                
+                #submit {
+                    background-color: #ff5a5f;
+                    margin-left: 8px;
+                    border: 1px;
+                    border-radius: 2px;
+                    width: 87px;
+                    height: 35px;
+
+                    font-size: 18px;
+                    color: white;
+                    font-family: "Lato Light";
+
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+    }
+}

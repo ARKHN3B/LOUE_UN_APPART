@@ -20,10 +20,11 @@ class Hosting_Services {
     protected $_img3;
     protected $_img4;
     protected $_img5;
+    protected $_price;
 
 
     public function __construct($userId, $housingtype, $country, $city, $title, $travelers, $beds, $bathrooms, $rooms,
-    $kitchens, $wifi, $airConditioner, $description, $img1, $img2, $img3, $img4, $img5) {
+    $kitchens, $wifi, $airConditioner, $description, $img1, $img2, $img3, $img4, $img5, $price) {
         $this->_userId = $userId;
         $this->_housingtype = $housingtype;
         $this->_country = $country;
@@ -42,6 +43,7 @@ class Hosting_Services {
         $this->_img3 = $img3;
         $this->_img4 = $img4;
         $this->_img5 = $img5;
+        $this->_price = $price;
     }
 
 
@@ -66,10 +68,11 @@ class Hosting_Services {
         $stag_img4 = $this->_img4;
         $stag_img5 = $this->_img5;
         $stag_data_img = array($stag_img1, $stag_img2, $stag_img3, $stag_img4, $stag_img5); 
+        $stag_price = strip_tags($this->_price);
         
 
         if (!empty($stag_housingtype) && !strlen($stag_country) == 0 && !strlen($stag_city) == 0 && !strlen($stag_title) == 0
-        && $stag_travelers > 0 && 
+        && $stag_travelers > 0 && !strlen($stag_city) == 0 &&
         $stag_beds > 0 && $stag_bathrooms > 0 && $stag_rooms > 0 && $stag_kitchens > 0  && strlen($stag_description) > 256){          
 
             if (!empty($stag_img1) && !empty($stag_img2) && !empty($stag_img3)) {
@@ -118,10 +121,14 @@ class Hosting_Services {
 
                     if (!empty($stag_wifi)) {
                         $leasingHome->setWifi(1);
+                    } else {
+                        $leasingHome->setWifi(0);
                     }
 
                     if (!empty($stag_airConditioner)) {
                         $leasingHome->setAirConditioner(1);
+                    } else {
+                        $leasingHome->setAirConditioner(0);
                     }
 
                     $leasingHome->setDescription($stag_description);
@@ -141,11 +148,19 @@ class Hosting_Services {
                         $leasingHome->setPicture5("empty");
                     }
 
+                    $leasingHome->setPrice($stag_price);
+
                     $leasingHome->save($dbManager);
-                }
-            }
+                } else {
+                    return false;
+                  }
+            } else {
+                return false;
+              }
 
         // <-- 3 pictures minimum --> //     
-        }
+        } else {
+            return false;
+          }
     }
 }

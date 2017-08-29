@@ -142,6 +142,10 @@ body {
                 color: #3c3c3c;
                 }
 
+                #search_bar_header:focus {
+                    outline-color: #008489;
+                }
+
                 #submit_header {
                     background-color: #ff5a5f;
                     margin-left: 8px;
@@ -152,6 +156,10 @@ body {
                     font-size: 18px;
                     color: white;
                     font-family: "Lato Light";
+                }
+
+                #submit_header:focus {
+                    outline: none;
                 }
             }
 

@@ -130,6 +130,8 @@ body {
         padding-left: 26px;
         font-size: 18px;
         color: #3c3c3c; }
+      body header form #span_header #search_bar_header:focus {
+        outline-color: #008489; }
       body header form #span_header #submit_header {
         background-color: #ff5a5f;
         margin-left: 8px;
@@ -139,6 +141,8 @@ body {
         font-size: 18px;
         color: white;
         font-family: "Lato Light"; }
+      body header form #span_header #submit_header:focus {
+        outline: none; }
     body header form #span_checking {
       width: 420px;
       position: absolute;

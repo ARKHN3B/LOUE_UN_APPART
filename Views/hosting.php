@@ -41,7 +41,10 @@
                         <label for="radio_appartment">Appartment</label>
                 </span>
 
-                <input require type="text" name="country" placeholder="Country" class="input-width">
+                <div>
+                    <input require type="text" name="country" placeholder="Country" class="input-width">
+                    <input require type="text" name="price" placeholder="Price / day" class="input-width" style="margin-left:30px; width:150px;" >  
+                </div>
                 <input require type="text" name="city" placeholder="City" class="input-width input-city">           
 
                 <div id="select-number">

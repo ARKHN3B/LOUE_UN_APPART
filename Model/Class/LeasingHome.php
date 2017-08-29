@@ -22,8 +22,9 @@ class LeasingHome {
     protected $_picture3;
     protected $_picture4;
     protected $_picture5;
-
-
+    protected $_price;
+    
+    
     public function __construct($data = array()) {
         $this->hydrate($data);
     }
@@ -330,6 +331,19 @@ class LeasingHome {
     }
     
     
+
+    public function getPrice(){
+        return $this->_price;
+    }
+    
+    public function setPrice($up_price)
+    {
+        $up_price = (int) $up_price;
+    
+        if (is_int($up_price)) {
+            $this->_price = $up_price;
+        }
+    }
 
 
     /* ------ HYDRATATION ------ */
