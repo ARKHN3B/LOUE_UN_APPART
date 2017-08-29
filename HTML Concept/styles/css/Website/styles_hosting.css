@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Lato Black";
+  src: url("Lato/Lato-Black.ttf"); }
+
+@font-face {
+  font-family: "Lato Black-Italic";
+  src: url("Lato/Lato-BlackItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("Lato/Lato-Bold.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold-Italic";
+  src: url("Lato/Lato-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline";
+  src: url("Lato/Lato-Hairline.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline-Italic";
+  src: url("Lato/Lato-HairlineItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Italic";
+  src: url("Lato/Lato-Italic.ttf"); }
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: "Lato Light-Italic";
+  src: url("Lato/Lato-LightItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato";
+  src: url("Lato/Lato-Regular.ttf"); }
+
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  width: 100%;
+  height: 100vh; }
+  body #background_header {
+    width: 100%;
+    height: auto;
+    position: fixed; }
+  body header {
+    width: 100%;
+    height: 13%; }
+    body header .bloc-logo {
+      position: relative;
+      width: 100%;
+      height: 64px;
+      float: left; }
+    body header .bloc-logo canvas,
+    body header .bloc-logo .logo-mask {
+      display: block;
+      width: 100%;
+      height: 64px; }
+    body header .bloc-logo .logo-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../../_pictures/navpage.png");
+      text-indent: -9999px; }
+    body header h1 {
+      position: absolute;
+      left: 152px;
+      top: 5px;
+      font-family: "Lato Italic";
+      color: #f9f9f9;
+      font-size: 23px; }
+      body header h1 a {
+        font-family: "Lato Italic";
+        color: #f9f9f9;
+        font-size: 23px;
+        text-decoration: none; }
+    body header span {
+      display: flex;
+      width: 500px;
+      height: 50px;
+      position: absolute;
+      right: 0px;
+      top: 25px; }
+      body header span a {
+        color: #f9f9f9;
+        font-family: "Lato Light";
+        text-decoration: none;
+        margin-left: 30px;
+        cursor: pointer; }
+      body header span a:hover {
+        text-decoration: underline; }
+      body header span #link_img_account {
+        margin-left: 7px; }
+        body header span #link_img_account #img_account {
+          width: 35px;
+          height: auto;
+          margin-top: -8px; }
+      body header span #link_img_account:hover {
+        text-decoration: none; }
+  body section {
+    width: 86%;
+    height: 1002px;
+    margin-bottom: 40px;
+    position: relative;
+    left: 7%;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column; }
+    body section h2 {
+      font-family: "Lato Light";
+      background: -webkit-gradient(linear, left top, right bottom, from(#ff4054), to(#6bc2ff));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 75px; }
+    body section form {
+      display: flex;
+      flex-direction: column;
+      font-family: "Lato";
+      color: #404040; }
+      body section form .input-width {
+        width: 300px;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 0.5px solid #e6e2e2;
+        padding-left: 15px;
+        font-size: 13px;
+        font-family: "Lato";
+        color: #404040; }
+      body section form .input-width:focus {
+        outline-color: #008489;
+        outline-width: 3px; }
+      body section form .input-city {
+        margin-bottom: 50px; }
+      body section form #radio {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px; }
+        body section form #radio input {
+          margin-right: 8px; }
+        body section form #radio label {
+          margin-right: 50px;
+          color: #404040;
+          cursor: pointer; }
+        body section form #radio label:hover {
+          background: -webkit-gradient(linear, left top, right bottom, from(#ff4054), to(#6bc2ff));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+      body section form #select-number {
+        margin-left: 2px;
+        margin-bottom: 20px; }
+        body section form #select-number #label {
+          display: flex;
+          color: #008489;
+          font-family: "Lato Light"; }
+          body section form #select-number #label .margin-right {
+            margin-right: 34px; }
+        body section form #select-number #select {
+          display: flex; }
+          body section form #select-number #select select {
+            margin-top: 3px;
+            height: 30px; }
+          body section form #select-number #select select:first-child {
+            width: 146px; }
+          body section form #select-number #select select:nth-child(2) {
+            width: 119px; }
+          body section form #select-number #select select:nth-child(3) {
+            width: 163px; }
+          body section form #select-number #select select:nth-child(4) {
+            width: 130px; }
+          body section form #select-number #select select:nth-child(5) {
+            width: 145px; }
+          body section form #select-number #select .margin-right {
+            margin-right: 30px; }
+          body section form #select-number #select select:focus {
+            outline: none;
+            border: 2px solid #008489; }
+      body section form #input-checkbox {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+        margin-left: 3px; }
+        body section form #input-checkbox input {
+          margin-right: 50px;
+          margin-top: 6px; }
+        body section form #input-checkbox label {
+          margin-right: 5px;
+          color: #008489;
+          font-family: "Lato Light";
+          cursor: pointer; }
+      body section form #label_textarea {
+        margin-left: 4px;
+        margin-bottom: 8px;
+        width: 93px;
+        font-family: "Lato Light"; }
+      body section form #textarea {
+        font-size: 15px;
+        font-family: "Lato Light";
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #d2d0d0;
+        color: #404040;
+        padding-left: 5px; }
+      body section form #textarea:focus {
+        outline-color: #008489;
+        outline-width: 3px; }
+      body section form .img {
+        width: 250px;
+        margin-bottom: 10px; }
+      body section form div .label-file {
+        color: #008489;
+        font-family: "Lato Light";
+        font-size: 13px; }
+      body section form div input:focus {
+        outline-color: #008489;
+        outline-width: 3px; }
+      body section form #label_submit {
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        width: 120px;
+        height: 35px;
+        position: relative;
+        right: -939px;
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background: linear-gradient(to right, #ff4054, #6bc2ff); }
+      body section form #label_submit:hover {
+        color: #f9f9f9; }
+  body #section-redirect {
+    height: auto; }
+    body #section-redirect #h4-redirect {
+      font-family: "Lato Bold"; }
+    body #section-redirect #p-redirect {
+      font-family: "Lato"; }
+      body #section-redirect #p-redirect a {
+        color: #008489;
+        text-decoration: none; }
+      body #section-redirect #p-redirect a:hover {
+        text-decoration: underline; }

@@ -10,7 +10,9 @@ class User {
     protected $_birth;
     protected $_signup;
     protected $_newsletter;
+    protected $_profilPic;
     
+
 
     public function __construct($data = array()) {
         $this->hydrate($data);
@@ -123,6 +125,21 @@ class User {
     
         if (is_int($up_newsletter)) {
             $this->_newsletter = $up_newsletter;
+        }
+    }
+
+
+    
+    public function getProfilPic(){
+        return $this->_profilPic;
+    }
+    
+    public function setProfilPic($up_profilPic)
+    {
+        $up_profilPic = (string) $up_profilPic;
+    
+        if (is_string($up_profilPic)) {
+            $this->_profilPic = $up_profilPic;
         }
     }
     

@@ -15,8 +15,6 @@ class ConnectionDatabase {
                 catch (PDOException $e){
                     die("ERROR : ". $e->getMessage());
                 }
-            
-            
         }
     }
 }

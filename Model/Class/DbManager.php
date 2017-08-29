@@ -2,15 +2,29 @@
 
 class DbManager {
 
-    protected $_connectToBdd;
+    protected $_connectToDatabase;
+    protected $_leasinghomerepository;
+
 
     public function __construct() {
-        $this->_connectToBdd = ConnectionDatabase::setConnexion();
+        $this->_connectToDatabase = ConnectionDatabase::setConnexion();
+        $this->setLeasingHomeRepository(new LeasingHomeRepository($this->_connectToDatabase));
     }
+
+
+    public function getLeasingHomeRepository(){
+        return $this->_leasinghomerepository;
+    }
+    
+    public function setLeasingHomeRepository($up_leasinghomerepository)
+    {
+        $this->_leasinghomerepository = $up_leasinghomerepository;
+    }
+    
 
     public function insertUser(User $user)
     {
-        $connexion = $this->_connectToBdd;
+        $connexion = $this->_connectToDatabase;
         $query = "INSERT INTO members(email, firstname, lastname, password, birth, newsletter, signup) VALUES (?, ?, ?, ?, ?, ?, NOW())";
         $request = $connexion->prepare($query);
         $request->execute(array(
@@ -26,7 +40,7 @@ class DbManager {
 
     public function selectById($id)
     {
-        $connexion = $this->_connectToBdd;
+        $connexion = $this->_connectToDatabase;
         $query = "SELECT * FROM members WHERE id=:id";
         $request = $connexion->prepare($query);
         $request->execute(array(
@@ -47,7 +61,7 @@ class DbManager {
 
     public function selectByEmail($email)
     {
-        $connexion = $this->_connectToBdd;
+        $connexion = $this->_connectToDatabase;
         $query = "SELECT * FROM members WHERE email=?";
         $request = $connexion->prepare($query);
         $request->execute(array(

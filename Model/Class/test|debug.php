@@ -1,12 +1,17 @@
 <?php
 require "User.php";
+require "LeasingHome.php";
+require "LeasingHomeRepository.php";
 require "ConnectionDatabase.php";
 require "DbManager.php";
 
 $bdd = new DbManager();
+$LeasingHome = $bdd->getLeasingHomeRepository();
+// $LeasingHome->selectByCountry("Canada");
+var_dump($LeasingHome->selectByCountry("Canada"))
 // $bdd->selectById(1);
 // var_dump($bdd->selectById(1));
-var_dump($bdd->selectByEmail("goldenradcoon@icloud.com"));
+// var_dump($bdd->selectByEmail("goldenradcoon@icloud.com"));
 
 //INSERT
 // $user = new User();

@@ -97,7 +97,7 @@ body {
       margin-bottom: 9px;
       font-family: "Lato Light";
       color: #757575; }
-    body form .email_False {
+    body form #email_False {
       display: none; }
     body form .email_True {
       display: block; }

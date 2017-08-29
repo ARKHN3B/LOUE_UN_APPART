@@ -1,0 +1,229 @@
+@import "Lato.scss";
+
+
+body {
+    overflow-x: hidden;
+    
+    margin: 0px;
+
+    width: 100%;
+    height: 100vh;
+    
+    #background_header {
+        width: 100%;
+        height: auto;
+
+        position: fixed; 
+    }
+
+    header {
+    
+        width: 100%;
+        height: 13%;
+        
+        .bloc-logo {
+            position: relative;
+            width: 100%;
+            height: 64px;
+            float: left;
+        }
+        
+        .bloc-logo canvas,
+        .bloc-logo .logo-mask {
+            display: block;
+            width: 100%;
+            height: 64px;
+        }
+        
+        .bloc-logo .logo-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../../../_pictures/navpage.png");
+            text-indent: -9999px;
+        }
+
+        h1 {
+            position: absolute;
+            left: 152px;
+            top: 5px;
+
+            font-family: "Lato Italic";
+            color: #f9f9f9;
+            font-size: 23px;
+
+            a {
+                font-family: "Lato Italic";
+                color: #f9f9f9;
+                font-size: 23px;
+                text-decoration: none;
+            }
+        }
+
+        span {
+            display: flex;
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 25px;
+
+            a {
+                color: #f9f9f9;
+                font-family: "Lato Light";
+                text-decoration: none;
+                margin-left: 30px;
+
+                cursor: pointer;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            #link_img_account {
+                margin-left: 7px;
+
+                #img_account {
+                    width: 35px;
+                    height: auto;
+
+                    margin-top: -8px;
+                }
+            }
+
+            #link_img_account:hover {
+                text-decoration: none;
+            }
+            
+        }
+    }
+
+    section {
+        width: 86%;
+        height: 372px;
+
+        margin-bottom: 40px;
+
+        position: relative;
+        left: 7%;
+
+        border-radius: 4px;
+
+        background-color: #f9f9f9;
+
+        img {
+            width: 200px;
+            height: auto;
+
+            border-radius: 50%;
+            border: 1px solid #f9f9f9;
+
+            background-color: #ff4054;
+
+            position: relative;
+            top: 70px;
+            left: 73px;
+        }
+
+        #firstlastname {
+            width: 100px;
+
+            position: relative;
+            top: -108px;
+            left: 335px;
+
+            display: flex;
+            flex-direction: row;
+
+            p {
+                margin: 0px;
+            }
+
+            p:first-child {
+                font-family: "Lato";
+                font-size: 18px;
+                color: #404040;
+
+                margin-right: 5px;      
+            }
+
+            p:last-child {
+                margin-top: -2px;
+
+                font-family: "Lato Bold";
+                font-size: 21px;
+                color: #ff4054;
+            }
+        }
+
+        #email {
+            position: relative;
+            top: -93px;
+            left: 335px;
+
+            font-family: "Lato";
+            font-size: 17px;
+            color: #008489;
+        }
+
+        #birth {
+            position: relative;
+            top: -83px;
+            left: 335px;
+
+            font-family: "Lato Light";
+            font-size: 15px;
+            color: #404040;
+        }
+
+        #register {
+            position: relative;
+            top: -92px;
+            left: 335px;
+
+            font-family: "Lato Light";
+            font-size: 15px;
+            color: #404040;
+        }
+
+        .note_profil {
+            font-family: "Lato Light-Italic";
+            font-size: 13px;
+            color: #008489;
+            width: 50px;
+
+            position: relative;
+            top: -65px;
+            left: 129px;
+
+            span {
+                font-family: "Lato Light";
+                font-size: 10px;
+
+                position: relative;
+                top: -17px;
+                left: 41px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #008489;
+            font-family: "Lato Light";
+            font-size: 14px;
+
+            position: relative;
+            top: -383px;
+            right: -95.7%;
+
+            .fa {
+                font-size: 12px;
+            }
+        }
+
+        a:hover {
+            color: #404040;
+        }
+    }
+}

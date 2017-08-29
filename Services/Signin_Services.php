@@ -24,6 +24,7 @@ class Signin_Services {
                     $_SESSION['lastname'] = $data['lastname'];
                     $_SESSION['birth'] = $data['birth'];
                     $_SESSION['signup'] = $data['signup'];
+                    $_SESSION['profilPic'] = $data['profilPic'];
                 }
             }
         }

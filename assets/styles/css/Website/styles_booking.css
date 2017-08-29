@@ -1,0 +1,413 @@
+@font-face {
+  font-family: "Lato Black";
+  src: url("Lato/Lato-Black.ttf"); }
+
+@font-face {
+  font-family: "Lato Black-Italic";
+  src: url("Lato/Lato-BlackItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("Lato/Lato-Bold.ttf"); }
+
+@font-face {
+  font-family: "Lato Bold-Italic";
+  src: url("Lato/Lato-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline";
+  src: url("Lato/Lato-Hairline.ttf"); }
+
+@font-face {
+  font-family: "Lato Hairline-Italic";
+  src: url("Lato/Lato-HairlineItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato Italic";
+  src: url("Lato/Lato-Italic.ttf"); }
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: "Lato Light-Italic";
+  src: url("Lato/Lato-LightItalic.ttf"); }
+
+@font-face {
+  font-family: "Lato";
+  src: url("Lato/Lato-Regular.ttf"); }
+
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  width: 100%;
+  height: 100vh; }
+  body #background_header {
+    width: 100%;
+    height: auto;
+    position: fixed; }
+  body header {
+    width: 100%;
+    height: 14%; }
+    body header .bloc-logo {
+      position: relative;
+      width: 100%;
+      height: 64px;
+      float: left; }
+    body header .bloc-logo canvas,
+    body header .bloc-logo .logo-mask {
+      display: block;
+      width: 100%;
+      height: 64px; }
+    body header .bloc-logo .logo-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../../_pictures/navpage.png");
+      text-indent: -9999px; }
+    body header h1 {
+      position: absolute;
+      left: 152px;
+      top: 5px;
+      font-family: "Lato Italic";
+      color: #f9f9f9;
+      font-size: 23px; }
+      body header h1 a {
+        font-family: "Lato Italic";
+        color: #f9f9f9;
+        font-size: 23px;
+        text-decoration: none; }
+    body header span {
+      display: flex;
+      width: 500px;
+      height: 50px;
+      position: absolute;
+      right: 0px;
+      top: 25px; }
+      body header span a {
+        color: #f9f9f9;
+        font-family: "Lato Light";
+        text-decoration: none;
+        margin-left: 30px;
+        cursor: pointer; }
+      body header span a:hover {
+        text-decoration: underline; }
+      body header span #link_img_account {
+        margin-left: 7px; }
+        body header span #link_img_account #img_account {
+          width: 35px;
+          height: auto;
+          margin-top: -8px; }
+      body header span #link_img_account:hover {
+        text-decoration: none; }
+  body section {
+    width: 86%;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative;
+    left: 7%;
+    border-radius: 4px;
+    background-color: #f9f9f9; }
+    body section #bd-dark {
+      position: absolute;
+      width: 100%;
+      height: 412px;
+      background-color: #ff5a5f;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px; }
+    body section .rslides {
+      position: relative;
+      list-style: none;
+      overflow: hidden;
+      width: 100%;
+      height: 409px;
+      padding: 0;
+      margin: 0; }
+    body section .rslides li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0; }
+    body section .rslides li:first-child {
+      position: relative;
+      display: block;
+      float: left; }
+    body section .rslides img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: -250px; }
+    body section .prev {
+      position: absolute;
+      top: 177px;
+      left: 10px;
+      z-index: 999;
+      color: rgba(249, 249, 249, 0.65);
+      font-size: 43px; }
+    body section .prev:hover {
+      color: rgba(252, 66, 86, 0.58); }
+    body section .next {
+      position: absolute;
+      top: 177px;
+      right: 10px;
+      z-index: 999;
+      color: rgba(249, 249, 249, 0.65);
+      font-size: 43px; }
+    body section .next:hover {
+      color: rgba(117, 186, 244, 0.7); }
+    body section form {
+      width: 350px;
+      height: 455px;
+      background-color: #ececec;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      position: relative;
+      top: -51px;
+      right: -800px;
+      z-index: 3; }
+      body section form #color {
+        width: 100%;
+        height: 54px;
+        background-color: #ff5a5f;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: flex;
+        align-items: center; }
+        body section form #color p {
+          margin: 0px;
+          padding-left: 30px;
+          font-family: "Lato Bold";
+          color: #f9f9f9;
+          font-size: 17px; }
+      body section form #border {
+        width: 99.6%;
+        height: 400px;
+        border-bottom: 1px solid rgba(202, 202, 202, 0.7);
+        border-left: 1px solid rgba(202, 202, 202, 0.7);
+        border-right: 1px solid rgba(202, 202, 202, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        body section form #border label:first-child {
+          margin-left: -217px;
+          margin-bottom: 3px;
+          font-family: "Lato Light";
+          color: #343434;
+          font-size: 13px; }
+        body section form #border label:nth-child(3) {
+          margin-left: -234px;
+          margin-bottom: 3px;
+          font-family: "Lato Light";
+          color: #343434;
+          font-size: 13px; }
+        body section form #border input {
+          width: 260px;
+          height: 34px;
+          margin-bottom: 25px;
+          border-radius: 4px;
+          border: 1px solid #dadada;
+          font-family: "Lato Light";
+          font-size: 13px;
+          padding-left: 20px;
+          letter-spacing: 2px; }
+        body section form #border input:focus {
+          outline-color: #008489; }
+        body section form #border #submit-label {
+          width: 300px;
+          height: 45px;
+          background-color: #ff5a5f;
+          border-radius: 4px;
+          position: relative;
+          top: 38px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Lato";
+          color: #f9f9f9;
+          margin: 0px; }
+    body section .offer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 38px;
+      margin-left: 4%;
+      width: 92%; }
+      body section .offer .offer_title {
+        display: flex;
+        width: 718px;
+        position: relative;
+        top: -460px;
+        right: 16px; }
+        body section .offer .offer_title h4 {
+          font-family: "Lato Bold";
+          font-size: 26px;
+          color: #008489;
+          margin: 0px 7px 0px 0px; }
+        body section .offer .offer_title h4:hover {
+          color: #ff5a5f; }
+      body section .offer .offer_content {
+        margin-top: 10px;
+        height: auto;
+        width: 925px;
+        position: relative;
+        top: -201px;
+        left: -312px; }
+        body section .offer .offer_content .offer_promotion {
+          position: relative;
+          top: -393px;
+          left: 327px;
+          margin: 0px;
+          width: 565px;
+          height: auto;
+          text-align: justify;
+          font-family: "Lato";
+          color: #272727; }
+        body section .offer .offer_content .lato-light:hover {
+          color: #008489; }
+        body section .offer .offer_content .lato-light {
+          font-family: "Lato Light";
+          color: #272727; }
+          body section .offer .offer_content .lato-light i {
+            margin-right: 4px;
+            color: #008489; }
+          body section .offer .offer_content .lato-light i:hover {
+            color: #272727; }
+        body section .offer .offer_content .Travelers {
+          position: relative;
+          top: -244px;
+          left: 327px; }
+        body section .offer .offer_content .Rooms {
+          position: relative;
+          top: -249px;
+          left: 328px; }
+          body section .offer .offer_content .Rooms i {
+            margin-right: 7px; }
+        body section .offer .offer_content .Beds {
+          position: relative;
+          top: -313px;
+          left: 463px; }
+          body section .offer .offer_content .Beds i {
+            margin-right: 6px; }
+        body section .offer .offer_content .Bathrooms {
+          position: relative;
+          top: -348px;
+          left: 571px; }
+          body section .offer .offer_content .Bathrooms i {
+            margin-right: 6px; }
+        body section .offer .offer_content .Kitchens {
+          position: relative;
+          top: -354px;
+          left: 466px; }
+          body section .offer .offer_content .Kitchens i {
+            margin-right: 7px; }
+        body section .offer .offer_content .Wi-fi {
+          position: relative;
+          top: -389px;
+          left: 608px; }
+        body section .offer .offer_content .Air-Conditioner {
+          position: relative;
+          top: -424px;
+          left: 707px; }
+        body section .offer .offer_content .offer_line {
+          width: 729px;
+          height: 1px;
+          border-bottom: 1px solid #dadada;
+          position: relative;
+          top: -331px;
+          left: 297px; }
+        body section .offer .offer_content #Pictures {
+          position: relative;
+          left: 325px;
+          top: -331px;
+          margin-bottom: 57px; }
+          body section .offer .offer_content #Pictures h5 {
+            font-family: "Lato";
+            font-size: 17px;
+            color: #008489; }
+          body section .offer .offer_content #Pictures div {
+            width: 685px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+            body section .offer .offer_content #Pictures div img {
+              width: 192px;
+              height: 108px;
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px;
+              border: 2px solid white; }
+        body section .offer .offer_content #comments {
+          position: relative;
+          left: 325px;
+          top: -331px;
+          margin-bottom: 57px; }
+          body section .offer .offer_content #comments h5 {
+            font-family: "Lato";
+            font-size: 17px;
+            color: #008489; }
+      body section .offer .proposedby {
+        position: absolute;
+        top: 817px;
+        left: 801px;
+        font-family: "Lato Light-Italic";
+        font-size: 14px;
+        color: #343434; }
+      body section .offer .offer_profil {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 1142px;
+        left: -140px; }
+        body section .offer .offer_profil .profil_line_vertical {
+          height: 255px;
+          width: 348px;
+          border-left: 1px solid #dadada;
+          border-bottom: 1px solid #dadada;
+          position: relative;
+          top: -300px;
+          left: 940px; }
+        body section .offer .offer_profil img {
+          border: 1px solid #dadada;
+          width: 95px;
+          height: auto;
+          position: relative;
+          top: -535px;
+          left: 1077px;
+          background-color: rgba(255, 64, 84, 0.73);
+          border-radius: 50%; }
+        body section .offer .offer_profil .user_profil {
+          display: flex;
+          width: 100px;
+          position: relative;
+          top: -519px;
+          left: 1041px; }
+          body section .offer .offer_profil .user_profil a {
+            display: flex;
+            text-decoration: none; }
+            body section .offer .offer_profil .user_profil a p {
+              font-family: "Lato";
+              font-size: 17px; }
+            body section .offer .offer_profil .user_profil a p:first-child {
+              color: #272727;
+              margin-right: 5px; }
+            body section .offer .offer_profil .user_profil a p:last-child {
+              color: #ff5a5f;
+              font-family: "Lato Bold"; }
+        body section .offer .offer_profil .note_profil {
+          font-family: "Lato Light-Italic";
+          font-size: 13px;
+          color: #008489;
+          width: 50px;
+          position: relative;
+          top: -542px;
+          left: 1080px; }
+          body section .offer .offer_profil .note_profil span {
+            font-family: "Lato Light";
+            font-size: 10px;
+            position: relative;
+            top: -17px;
+            left: 41px; }
+    body section .offer:nth-child(2) {
+      margin-top: 85px; }

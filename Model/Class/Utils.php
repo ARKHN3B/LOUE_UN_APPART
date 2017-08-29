@@ -23,4 +23,17 @@ class Utils {
         $data_Status = array($status, $signup, $link, $target);
         return $data_Status;
     }
+
+    static public function RedirectHosting()
+    {
+        if (isset($_SESSION['id'])) {
+            $link = "hosting";
+        } else {
+            $link = "redirecthosting";
+        }
+
+        return $link;
+    }
+
+    
 }

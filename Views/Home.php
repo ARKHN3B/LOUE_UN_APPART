@@ -24,16 +24,16 @@
 
             <div id="navblur"></div>
 
-             <form action="" method="POST" id="form_head">
+             <form action="search_location" method="POST" id="form_head">
                 <span id="span_checking">
 
                     <label for="check_house" id="label_check_house">
-                        <input type="checkbox" checked="checked" id="check_house">
+                        <input type="checkbox" checked="checked" id="check_house" name="check_house">
                         <span id="span_check_house">House</span>
                     </label>
 
                     <label for="check_appartment" id="label_check_appartment">
-                        <input type="checkbox" checked="checked" id="check_appartment">
+                        <input type="checkbox" checked="checked" id="check_appartment" name="check_appartment">
                         <span id="span_check_appartment">Appartment</span>
                     </label>
 
@@ -41,7 +41,8 @@
                 </span>
 
                  <span id="span_header">
-                     <input type="text" id="search_bar_header" placeholder="Enter a city, or country..."> <input type="submit" id="submit_header" value="Search">
+                     <input type="text" id="search_bar_header" placeholder="Enter a city, or country..." name="search_bar_home"> 
+                     <input type="submit" id="submit_header" value="Search">
                  </span>
              </form>
 
@@ -51,7 +52,7 @@
         <span id="title_website">Bilskirnir Location</span>
 
         <span id="span_header_connexion">
-            <a href="">Become a Host</a>
+            <a href="<?= $link_hosting ?>">Become a Host</a>
             <a href="">Help</a>
             <a href="signup" target="signin_target" id="signup_link" style="<?= $status_Session[1] ?>">Sign up</a>
             <a href="<?= $status_Session[2] ?>" target="<?= $status_Session[3] ?>" id="signin_link" ><?= $status_Session[0] ?></a> <!--  -->
